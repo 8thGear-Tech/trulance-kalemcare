@@ -49,8 +49,8 @@ nothing loads from Google at runtime.
 
 ## Before going live
 
-- **Hero photo:** replace the placeholder box in `src/components/Hero.tsx` with a real photo
-  (put it in `public/photos/` and use `next/image`).
+- **Photos:** live in `public/photos/` and are listed in `src/content/site.ts` (`hero.photo`, `photos`).
+  To swap one, replace the file or point the entry at a new file, and update its `alt` text.
 - **Contact form:** it currently opens the visitor's email app addressed to hello@kalemcare.com.
   To receive enquiries directly, connect `src/components/ContactForm.tsx` to a form service
   (e.g. Formspree or Resend) or a Next.js route handler.

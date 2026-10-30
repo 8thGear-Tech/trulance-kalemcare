@@ -29,7 +29,23 @@ export const hero = {
   intro:
     "When someone you love needs support, you are not simply looking for someone to help with daily tasks. You are looking for someone you can",
   introEmphasis: "trust",
-  photoNote: "[Photo: caregiver and client sharing tea at the kitchen table, natural light]",
+  photo: {
+    src: "/photos/kalem-companionship-tea.jpg",
+    alt: "A KALEM caregiver holding hands with an older woman over a cup of tea in her living room",
+  },
+};
+
+/** Photos used across the site. Put new photos in public/photos/ and list them here. */
+export const photos = {
+  servicesRow: [
+    { src: "/photos/kalem-dressing-support.jpg", alt: "A KALEM caregiver helping an older woman put on her cardigan", caption: "Personal support" },
+    { src: "/photos/kalem-meal-preparation.jpg", alt: "A KALEM caregiver and an older woman preparing a fresh salad together", caption: "Meal & home support" },
+    { src: "/photos/kalem-activity-exercise.jpg", alt: "Two KALEM caregivers leading an older couple through gentle stretching exercises", caption: "Companionship & activity" },
+  ],
+  families: {
+    src: "/photos/kalem-personal-care.jpg",
+    alt: "A KALEM caregiver gently helping an older woman with her morning routine",
+  },
 };
 
 export const intro = {

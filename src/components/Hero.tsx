@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { contact, headline, hero } from "@/content/site";
 import { Container, Eyebrow } from "./ui";
 
@@ -25,9 +26,15 @@ export default function Hero() {
             </a>
           </div>
         </div>
-        {/* Replace this placeholder with a real photo, e.g. <Image src="/photos/hero.jpg" fill className="object-cover" alt="..." /> */}
-        <div className="flex h-[440px] min-w-0 flex-[1_1_400px] items-center justify-center rounded-[28px_28px_28px_120px] border-[3px] border-gold bg-line p-6 text-center font-medium text-[#6B4A20]">
-          {hero.photoNote}
+        <div className="relative h-[320px] min-w-0 flex-[1_1_400px] overflow-hidden rounded-[28px_28px_28px_120px] border-[3px] border-gold sm:h-[440px]">
+          <Image
+            src={hero.photo.src}
+            alt={hero.photo.alt}
+            fill
+            priority
+            sizes="(min-width: 1024px) 560px, 100vw"
+            className="object-cover object-[60%_center]"
+          />
         </div>
       </Container>
     </section>

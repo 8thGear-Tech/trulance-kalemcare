@@ -1,4 +1,5 @@
-import { families } from "@/content/site";
+import Image from "next/image";
+import { families, photos } from "@/content/site";
 import { Bullets, Container, Eyebrow } from "./ui";
 
 export default function Families() {
@@ -15,13 +16,16 @@ export default function Families() {
             ))}
           </div>
           <p>{families.answer}</p>
-          <div className="mt-1.5 grid grid-cols-2 gap-2.5 font-display text-[17px] font-semibold text-purple">
+          <ul className="bullets mt-1.5 grid grid-cols-1 gap-x-7 gap-y-2 font-display text-[17px] font-semibold text-purple sm:grid-cols-2">
             {families.pillars.map((p) => (
-              <span key={p} className="border-t-2 border-gold pt-2">{p}</span>
+              <li key={p}>{p}</li>
             ))}
-          </div>
+          </ul>
         </div>
-        <div className="card card-accent min-w-0 flex-[1_1_440px] gap-3 p-7 text-[17px]">
+        <div className="card min-w-0 flex-[1_1_440px] gap-3 p-7 text-[17px]">
+          <div className="relative -mx-7 -mt-7 mb-2 aspect-[16/9] overflow-hidden rounded-t-[16px]">
+            <Image src={photos.families.src} alt={photos.families.alt} fill sizes="(min-width: 1024px) 560px, 100vw" className="object-cover object-[center_30%]" />
+          </div>
           <p>{c.body}</p>
           <p className="font-semibold">{c.lead}</p>
           <Bullets items={c.items} />

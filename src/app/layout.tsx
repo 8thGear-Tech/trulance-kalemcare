@@ -29,7 +29,9 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en-CA">
+    // Browser extensions (e.g. focus-visible helpers) add attributes to <html> before React loads.
+    // This only silences attribute mismatches on this one element, not on the rest of the page.
+    <html lang="en-CA" suppressHydrationWarning>
       <body>{children}</body>
     </html>
   );

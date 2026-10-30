@@ -1,4 +1,5 @@
-import { services } from "@/content/site";
+import Image from "next/image";
+import { photos, services } from "@/content/site";
 import { Bullets, Container, Eyebrow } from "./ui";
 
 export default function Services() {
@@ -15,9 +16,19 @@ export default function Services() {
             <p>{services.body}</p>
           </div>
         </div>
+        <div className="mb-10 grid gap-[22px] sm:grid-cols-3">
+          {photos.servicesRow.map((p) => (
+            <figure key={p.src} className="m-0">
+              <div className="relative aspect-[4/3] overflow-hidden rounded-[20px]">
+                <Image src={p.src} alt={p.alt} fill sizes="(min-width: 640px) 33vw, 100vw" className="object-cover" />
+              </div>
+              <figcaption className="mt-2.5 font-display text-[17px] font-semibold text-purple">{p.caption}</figcaption>
+            </figure>
+          ))}
+        </div>
         <div className="grid gap-[22px] md:grid-cols-2 xl:grid-cols-3">
           {services.items.map((s) => (
-            <article key={s.title} className="card card-accent">
+            <article key={s.title} className="card">
               <h3 className="font-display text-xl font-semibold text-purple">{s.title}</h3>
               {s.intro.map((p) => (
                 <p key={p}>{p}</p>

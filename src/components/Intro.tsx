@@ -18,7 +18,7 @@ export default function Intro() {
           <p>
             {intro.homeLine} <strong className="font-semibold">home.</strong>
           </p>
-          <div className="mt-1.5 rounded-[18px] border-t-[3px] border-gold bg-cream px-6 py-[22px]">
+          <div className="mt-1.5 rounded-[18px] bg-cream px-6 py-[22px]">
             <p className="text-[15px] text-muted">{intro.peace.lead}</p>
             <p className="mt-0.5 mb-1.5 font-display text-[30px] font-bold text-purple">{intro.peace.title}</p>
             <p>{intro.peace.body}</p>

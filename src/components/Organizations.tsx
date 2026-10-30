@@ -9,13 +9,13 @@ export default function Organizations() {
         <h2 className="heading mt-2.5 mb-3">{o.title}</h2>
         <p className="mb-9 max-w-[760px]">{o.body}</p>
         <div className="grid gap-[22px] md:grid-cols-2">
-          <article className="card card-accent bg-ivory">
+          <article className="card bg-ivory">
             <h3 className="font-display text-xl font-semibold text-purple">{o.retirement.title}</h3>
             <p>{o.retirement.intro}</p>
             <Bullets items={o.retirement.items} className="gap-x-5 sm:columns-2" />
             <p className="mt-auto pt-1 font-semibold text-purple">{o.retirement.close}</p>
           </article>
-          <article className="card card-accent bg-ivory">
+          <article className="card bg-ivory">
             <h3 className="font-display text-xl font-semibold text-purple">{o.healthcare.title}</h3>
             <p>{o.healthcare.intro}</p>
             <div className="flex flex-col gap-1">
