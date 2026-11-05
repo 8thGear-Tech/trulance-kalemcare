@@ -6,7 +6,7 @@ export default function Values() {
     <section>
       <Container className="py-[88px]">
         <Eyebrow>{values.eyebrow}</Eyebrow>
-        <div className="mt-[18px] mb-14 grid gap-[22px] sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-[18px] mb-14 grid gap-[22px] md:grid-cols-3">
           {values.items.map((v) => (
             <div key={v.title} className="rounded-[18px] bg-purple p-6 text-cream">
               <p className="font-display text-xl font-bold text-gold-light">{v.title}</p>

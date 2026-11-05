@@ -18,8 +18,6 @@ export default function Contact() {
             <dd><a href={`mailto:${contact.email}`}>{contact.email}</a></dd>
             <dt className="font-semibold">Website</dt>
             <dd>{contact.website}</dd>
-            <dt className="font-semibold">Service area</dt>
-            <dd>{contact.serviceArea}</dd>
           </dl>
         </div>
         <ContactForm />
