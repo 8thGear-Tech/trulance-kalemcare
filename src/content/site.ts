@@ -9,7 +9,6 @@ export const contact = {
   email: "hello@kalemcare.com",
   careersEmail: "careers@kalemcare.com",
   website: "kalemcare.com",
-  serviceArea: "Ontario",
 };
 
 export const nav = [
