@@ -10,7 +10,7 @@ export default function Footer() {
         <p className="text-xs font-semibold tracking-[0.18em] text-gold-light uppercase">{strapline}</p>
         <div className="flex flex-wrap gap-x-7 gap-y-2">
           <a href={`mailto:${contact.email}`} className="text-sand hover:text-gold-light">{contact.email}</a>
-          <a href={`mailto:${contact.careersEmail}`} className="text-sand hover:text-gold-light">Careers</a>
+          <a href={`mailto:${contact.email}`} className="text-sand hover:text-gold-light">Careers</a>
           <a href="#top" className="text-sand hover:text-gold-light">Privacy policy</a>
         </div>
         <p className="basis-full text-[13px] text-[#CDB8D9]">{footer.legal}</p>
